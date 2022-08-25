@@ -31,6 +31,7 @@ i=0
 while(input1 =='y' or input1 == 'Y'):
     countuser=0
     countcom=0
+    result=0
     while (i<3):
         print("                                                           Enter choice:- \n") 
         print("                                                           1 for Rock \U0001FAA8\n")
@@ -87,6 +88,7 @@ while(input1 =='y' or input1 == 'Y'):
         #we need to check of a draw
         print("\n")
         if choice == comp_choice:
+            result=result+1
             print(Fore.RED+"                                                      **********          **********                    **                **                         **       ")
             print(Fore.RED+"                                                      **         **       **        **                **   **              **                       **        ")
             print(Fore.RED+"                                                      **          **      **       **               **       **             **                     **         ")
@@ -204,15 +206,26 @@ while(input1 =='y' or input1 == 'Y'):
         print(Fore.RED+"                                                      **           **     *****                 **               **            **    **   **     **           ")
         print(Fore.RED+"                                                      **          **      **   ***            **                   **           ** **       **  **            ")
         print(Fore.RED+"                                                      ***********         **      ****      **                       **          **           **              ") 
-        print("\n")
-        print("                                                                               ****               ****     ")
-        print("                                                                              ** **     **       ** **     ")
-        print("                                                                             **  **     **      **  **     ")
-        print("                                                                                 **                 **     ")
-        print("                                                                                 **                 **     ")
-        print("                                                                                 **     **          **     ")
-        print("                                                                              ********  **       ********  ")
-        print("                                                                              ********           ********  ")
+        if result==3 :
+            print("                                                                                   **                        **           ")
+            print("                                                                                 **  **          **        **  **         ")
+            print("                                                                                **    **         **       **    **        ")
+            print("                                                                               **      **                **      **       ")
+            print("                                                                               **      **                **      **       ")
+            print("                                                                                **     **        **       **    **        ")
+            print("                                                                                 **  **         **         **  **         ")
+            print("                                                                                   **                        **           ")
+
+        else:    
+            print("\n")
+            print("                                                                               ****               ****     ")
+            print("                                                                              ** **     **       ** **     ")
+            print("                                                                             **  **     **      **  **     ")
+            print("                                                                                 **                 **     ")
+            print("                                                                                 **                 **     ")
+            print("                                                                                 **     **          **     ")
+            print("                                                                              ********  **       ********  ")
+            print("                                                                              ********           ********  ")
     print("\n")
     print("                                                           Do you want to play again? (Y/N)")
     input1 = input()
